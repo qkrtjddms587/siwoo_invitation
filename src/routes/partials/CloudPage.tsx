@@ -47,6 +47,7 @@ const move = keyframes`
     right: -500px
   }
 `;
+
 const CloudPageWrapper = styled.div`
   width: 100%;
   height: 100vh;
