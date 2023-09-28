@@ -9,7 +9,7 @@ const Container = styled.div`
   justify-content: center;
   max-width: 760px;
   margin: 0 auto;
-  height: 100vh;
+  min-height: 100vh;
   padding: 20px 30px 50px 30px;
 `;
 
@@ -99,7 +99,7 @@ const Desc = styled.span`
   width: fit-content;
   word-break: keep-all;
   line-height: 40px;
-  font-size: 20px;
+  font-size: 19px;
   text-align: center;
   display: inline;
   box-shadow: inset 0 -20px 0 #d9fcdb70;

@@ -1,61 +1,67 @@
-import styled from "styled-components"
-import {useEffect, useState} from "react";
+import styled from "styled-components";
+import { useEffect, useState } from "react";
 
 interface IPictureDiaryProps {
-    year: string;
-    month: string;
-    day: string;
-    week: string;
-    weather: string;
-    picture: string;
-    description: string;
+  year: string;
+  month: string;
+  day: string;
+  week: string;
+  weather: string;
+  picture: string;
+  description: string;
 }
 
 function PictureDiary(props: IPictureDiaryProps) {
-    const {year, month, day, weather, week, picture, description} = props;
-    const [descriptionArr, setDescriptionArr] = useState([])
+  const { year, month, day, weather, week, picture, description } = props;
+  const [descriptionArr, setDescriptionArr] = useState<any>([]);
 
-    useEffect(() => {
-        const arr = new Array(30)
-        for (let i = 0; i < description.length; i++) {
-            arr[i] = description.substring(0, 1)
-        }
-        setDescriptionArr([...arr])
-    }, [])
+  useEffect(() => {
+    const arr: any = new Array(49);
+    for (let i = 0; i < description.length; i++) {
+      arr[i] = description[i];
+    }
+    setDescriptionArr([...arr]);
+  }, []);
 
-    return (
-        <PictureDiaryWrapper>
-            <div className="picture-diary-header-wrapper">
-                <div className="picture-diary-date-wrapper">
-                    <div className="date-item">{year}
-                        <div className="static-text">년</div>
-                    </div>
-                    <div className="date-item">{month}
-                        <div className="static-text">월</div>
-                    </div>
-                    <div className="date-item">{day}
-                        <div className="static-text">일</div>
-                    </div>
-                    <div className="date-item">{week}
-                        <div className="static-text">요일</div>
-                    </div>
-                </div>
-                <div className="picture-diary-weather-wrapper" style={{textAlign: "center"}}>
-                    날씨
-                </div>
-                <div className="picture-diary-weather-wrapper">
-                    {weather}
-                </div>
-            </div>
-            <div className="picture-diary-picture-wrapper">
-                <img src={picture}/>
-            </div>
-            <div className="picture-diary-description-wrapper">
-                {descriptionArr.map((item, i) => <div key={i}>{item}</div>)}
-            </div>
-        </PictureDiaryWrapper>
-    )
-
+  return (
+    <PictureDiaryWrapper>
+      <div className="picture-diary-header-wrapper">
+        <div className="picture-diary-date-wrapper">
+          <div className="date-item">
+            {year}
+            <div className="static-text">년</div>
+          </div>
+          <div className="date-item">
+            {month}
+            <div className="static-text">월</div>
+          </div>
+          <div className="date-item">
+            {day}
+            <div className="static-text">일</div>
+          </div>
+          <div className="date-item">
+            {week}
+            <div className="static-text">요일</div>
+          </div>
+        </div>
+        <div
+          className="picture-diary-weather-wrapper"
+          style={{ textAlign: "center" }}
+        >
+          날씨
+        </div>
+        <div className="picture-diary-weather-wrapper">{weather}</div>
+      </div>
+      <div className="picture-diary-picture-wrapper">
+        <img src={picture} />
+      </div>
+      <div className="picture-diary-description-wrapper">
+        {descriptionArr.map((item: any, i: any) => (
+          <div key={i}>{item}</div>
+        ))}
+      </div>
+    </PictureDiaryWrapper>
+  );
 }
 
 const PictureDiaryWrapper = styled.div`
@@ -63,7 +69,7 @@ const PictureDiaryWrapper = styled.div`
   height: calc(100% - 80px);
   border: 1px solid red;
   background-color: #ffffff;
-  margin: 20px 40px 40px 40px;
+  margin: 20px 0 40px 0;
 
   .picture-diary-header-wrapper {
     height: 60px;
@@ -72,7 +78,7 @@ const PictureDiaryWrapper = styled.div`
 
     .picture-diary-date-wrapper {
       width: 70%;
-      padding: 20px 30px;
+      padding: 20px 20px;
       display: flex;
       justify-content: space-between;
 
@@ -100,13 +106,14 @@ const PictureDiaryWrapper = styled.div`
     width: 100%;
     display: flex;
     border-top: 1px solid red;
-    padding: 20px;
     border-bottom: 1px solid red;
+    box-shadow: inset 0px 0px 7px 7px #a6d9ea;
+    padding: 10px;
 
     img {
       height: 100%;
       width: 100%;
-      object-fit: contain;
+      object-fit: cover;
       display: flex;
     }
   }
@@ -115,19 +122,17 @@ const PictureDiaryWrapper = styled.div`
     display: grid;
     width: 100%;
     height: calc(50% - 20px);
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, 1fr);
     grid-gap: 1px;
     background-color: red;
 
     & > div {
-      font-size: 24px;
-      padding: 20px;
+      font-size: 21px;
+      padding: 7px;
       background-color: #ffffff;
     }
   }
+`;
 
-`
-
-
-export default PictureDiary
+export default PictureDiary;
