@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Siwoo_1 from "../../images/siwoo_1.jpeg";
+import Sun from "../../images/sun.png";
 
 const Container = styled.div`
   display: flex;
@@ -16,11 +17,12 @@ const Header = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 25px;
 `;
 
 const HDate = styled.h1`
-  font-size: 20px;
-  margin-bottom: 20px;
+  font-size: 30px;
+  margin-bottom: 10px;
 `;
 
 const HTitle = styled.div`
@@ -39,6 +41,7 @@ const MainTitle = styled.h1`
 
 const ImgContainer = styled.div`
   position: relative;
+  margin-bottom: 10px;
 `;
 
 const ImgBox = styled.div`
@@ -48,20 +51,30 @@ const ImgBox = styled.div`
   overflow: hidden;
   border-radius: 50%;
   margin-bottom: 30px;
+  border: 2px solid black;
 `;
 
 const CommentContainer = styled.div`
   top: 210px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   left: 150px;
   position: absolute;
   text-align: center;
   width: 150px;
   word-break: keep-all;
   padding: 10px 10px;
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  color: white;
   border-radius: 30px;
   border-top-left-radius: 0px;
+`;
+
+const SunImg = styled.img`
+  width: 130%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 45%;
+  left: 50%;
+  z-index: -1;
 `;
 
 const Comment = styled.span``;
@@ -97,7 +110,7 @@ const CmyContainer = styled.div`
   flex-direction: column;
   align-items: center;
   font-size: 25px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 `;
 
 const Date = styled.span``;
@@ -151,6 +164,7 @@ export default function Home() {
         <CommentContainer>
           <Comment>저의 첫번째 생일을 축하해주세요!</Comment>
         </CommentContainer>
+        <SunImg src={Sun} />
       </ImgContainer>
       <DescContainer>
         <Desc>시우가 건강하게 자랄 수 있도록</Desc>

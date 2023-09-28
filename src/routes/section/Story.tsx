@@ -1,4 +1,4 @@
-import {Swiper, SwiperSlide} from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import styled from "styled-components";
 import "swiper/css";
 import sun from "../../images/sun.png";
@@ -60,36 +60,27 @@ const SunInImg = styled.img`
 const CloudBox = styled.div``;
 
 export default function Story() {
-    return (
-        <StorySectionWrapper id="story_id" style={{height: "100vh"}}>
-            <Swiper
-                spaceBetween={50}
-                slidesPerView={1}
-                onSlideChange={() => console.log("slide change")}
-                onSwiper={(swiper) => console.log(swiper)}
-            >
-                <SwiperSlide>
-                    <div className="swiper-item-wrapper">
-                        <PictureDiary year={"2023"} month={"9"} day={"27"} week={"수"} weather={"맑음"} picture={siwoo_1}
-                                      description={"가나다라마바사아자차"}/>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="swiper-item-wrapper"></div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="swiper-item-wrapper"></div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="swiper-item-wrapper"></div>
-                </SwiperSlide>
-            </Swiper>
-            {/*<SunBox>*/}
-            {/*    <Sun src={sun}/>*/}
-            {/*    <SunInImgBox>*/}
-            {/*        <SunInImg src={siwoo_1}/>*/}
-            {/*    </SunInImgBox>*/}
-            {/*</SunBox>*/}
-        </StorySectionWrapper>
-    );
+  return (
+    <StorySectionWrapper id="story_id" style={{ height: "100vh" }}>
+      <Swiper
+        spaceBetween={50}
+        slidesPerView={1}
+        onSlideChange={() => console.log("slide change")}
+        onSwiper={(swiper) => console.log(swiper)}
+      >
+        <SwiperSlide>
+          <div className="swiper-item-wrapper"></div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="swiper-item-wrapper"></div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="swiper-item-wrapper"></div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="swiper-item-wrapper"></div>
+        </SwiperSlide>
+      </Swiper>
+    </StorySectionWrapper>
+  );
 }
