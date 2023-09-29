@@ -9,7 +9,7 @@ interface IPictureDiaryProps {
   weather: string;
   picture: string;
   description: string;
-  picPosition: string;
+  picPosition?: string;
 }
 
 function PictureDiary(props: IPictureDiaryProps) {
