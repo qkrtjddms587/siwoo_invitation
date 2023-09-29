@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import Siwoo_1 from "../../images/siwoo_1.jpeg";
+import siwoo_main from "../../images/siwoo_main.png";
+import siwoo_main_2 from "../../images/siwoo_main_2.png";
 import Sun from "../../images/sun.png";
 
 const Container = styled.div`
@@ -51,13 +52,12 @@ const ImgBox = styled.div`
   overflow: hidden;
   border-radius: 50%;
   margin-bottom: 30px;
-  border: 2px solid black;
 `;
 
 const CommentContainer = styled.div`
-  top: 210px;
+  top: 68px;
   background-color: rgba(0, 0, 0, 0.3);
-  left: 150px;
+  left: 125px;
   position: absolute;
   text-align: center;
   width: 150px;
@@ -80,9 +80,10 @@ const SunImg = styled.img`
 const Comment = styled.span``;
 
 const Img = styled.img`
-  width: 600px;
-  top: -160px;
-  left: -210px;
+  width: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   position: absolute;
 `;
 
@@ -159,11 +160,8 @@ export default function Home() {
       </Header>
       <ImgContainer>
         <ImgBox>
-          <Img src={Siwoo_1} />
+          <Img src={siwoo_main_2} />
         </ImgBox>
-        <CommentContainer>
-          <Comment>저의 첫번째 생일을 축하해주세요!</Comment>
-        </CommentContainer>
         <SunImg src={Sun} />
       </ImgContainer>
       <DescContainer>
