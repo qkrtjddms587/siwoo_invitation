@@ -21,10 +21,8 @@ const StorySectionWrapper = styled.div`
     overflow-x: visible;
 
     .swiper-wrapper {
-      /* width: 100%; */
       .swiper-slide {
         .swiper-item-wrapper {
-          /* width: 100%; */
           height: 100%;
         }
       }
@@ -62,7 +60,7 @@ export default function Story() {
               weather={"맑음"}
               picture={siwoo_story_2}
               description={
-                "시우가 태어난지 백일이 되었어요! 맘마를 많이 먹어서 오동통 볼상이 올랐어요~"
+                "시우가 태어난지 백일이 되었어요! 맘마를 많이 먹어서 오동통 볼살이 올랐어요~"
               }
             />
           </div>
