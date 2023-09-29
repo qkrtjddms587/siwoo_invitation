@@ -45,6 +45,7 @@ export default function Story() {
               week={"월"}
               weather={"맑음"}
               picture={siwoo_story_1}
+              picPosition={"top"}
               description={
                 "시우가 태어난날이에요.엄마아빠를 만나 행복해요.무럭무럭 자라는 시우를 잘지켜봐주세요!"
               }

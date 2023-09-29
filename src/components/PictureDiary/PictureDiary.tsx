@@ -9,10 +9,20 @@ interface IPictureDiaryProps {
   weather: string;
   picture: string;
   description: string;
+  picPosition?: string;
 }
 
 function PictureDiary(props: IPictureDiaryProps) {
-  const { year, month, day, weather, week, picture, description } = props;
+  const {
+    year,
+    month,
+    day,
+    weather,
+    week,
+    picture,
+    picPosition = "center",
+    description,
+  } = props;
   const [descriptionArr, setDescriptionArr] = useState<any>([]);
 
   useEffect(() => {
@@ -53,7 +63,7 @@ function PictureDiary(props: IPictureDiaryProps) {
         <div className="picture-diary-weather-wrapper">{weather}</div>
       </div>
       <div className="picture-diary-picture-wrapper">
-        <img src={picture} />
+        <img src={picture} style={{ objectPosition: picPosition }} />
       </div>
       <div className="picture-diary-description-wrapper">
         {descriptionArr.map((item: any, i: any) => (
