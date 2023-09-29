@@ -9,7 +9,7 @@ interface IPictureDiaryProps {
   weather: string;
   picture: string;
   description: string;
-  picPosition?: string;
+  picPosition: string;
 }
 
 function PictureDiary(props: IPictureDiaryProps) {
@@ -131,7 +131,7 @@ const PictureDiaryWrapper = styled.div`
   .picture-diary-description-wrapper {
     display: grid;
     width: 100%;
-    height: calc(50% - 20px);
+    min-height: calc(50% - 20px);
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(7, 1fr);
     grid-gap: 1px;

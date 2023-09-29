@@ -50,7 +50,7 @@ const Address = styled.div`
   width: 100%;
   border-radius: 15px;
   border: 2px solid black;
-  padding: 20px 15px;
+  padding: 20px 10px;
   text-align: center;
   font-size: 5.1vw;
   margin-bottom: 10px;

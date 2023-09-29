@@ -20,8 +20,9 @@ const NavColumn = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
   color: white;
-  padding: 10px 30px 10px 30px;
+  padding: 10px 10px 10px 10px;
   border-radius: 10px;
 `;
 

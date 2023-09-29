@@ -33,10 +33,14 @@ const HTitle = styled.div`
 `;
 
 const MainTitle = styled.h1`
+  -webkit-text-size-adjust: none;
+  display: inline-block;
   font-size: 32px;
   border: 2px solid black;
   border-radius: 30px;
-  padding: 10px 50px 5px 50px;
+  width: 280px;
+  text-align: center;
+  padding: 10px 20px 5px 20px;
 `;
 
 const ImgContainer = styled.div`
@@ -128,8 +132,10 @@ const FamTitle = styled.h1`
 const FamName = styled.h1`
   border: 2px solid black;
   border-radius: 20px;
-  padding: 25px 20px 10px 20px;
+  width: 118px;
+  padding: 25px 10px 10px 10px;
   font-size: 30px;
+  text-align: center;
 `;
 
 export default function Home() {
