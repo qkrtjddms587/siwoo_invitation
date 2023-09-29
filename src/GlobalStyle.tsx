@@ -20,7 +20,6 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  scale : 1;
   vertical-align: baseline;
   -webkit-text-size-adjust : none;  /* 크롬, 사파리, 오페라 신버전 */
   -ms-text-size-adjust : none;  /* IE */
