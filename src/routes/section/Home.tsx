@@ -149,7 +149,7 @@ export default function Home() {
       </ImgContainer>
       <DescContainer>
         <Desc>시우가 건강하게 자랄 수 있도록</Desc>
-        <Desc>사랑과 관심으로 지켜봐주신 소중한 분들께</Desc>
+        <Desc>사랑으로 지켜봐주신 소중한 분들께</Desc>
         <Desc>감사의 마음을 전하고자 합니다.</Desc>
       </DescContainer>
       <CmyContainer>

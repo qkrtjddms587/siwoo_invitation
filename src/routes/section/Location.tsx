@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import styled from "styled-components";
 import Siwoo_face from "../../images/siwoo-face-modified.png";
 import Siwoo_face_2 from "../../images/siwoo_2-modified.png";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 const LocationContainer = styled.div`
   width: 100%;
@@ -51,7 +52,7 @@ const Address = styled.div`
   border: 2px solid black;
   padding: 20px 15px;
   text-align: center;
-  font-size: 5.3vw;
+  font-size: 5.1vw;
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
@@ -197,17 +198,6 @@ export default function Location() {
     initMap();
   }, []);
 
-  const handleClick = (location: string) => {
-    const address =
-      location === "돌잔치"
-        ? "대구 수성구 동대구로 194-7 아현정"
-        : "대구 수성구 황금동 637-1";
-
-    window.navigator.clipboard.writeText(address).then(() => {
-      alert("복사 완료!");
-    });
-  };
-
   return (
     <LocationContainer id="location_id">
       <LocationTitle>장 소</LocationTitle>
@@ -227,7 +217,14 @@ export default function Location() {
           >
             지도 이동
           </LocationBtn>
-          <CopyBtn onClick={() => handleClick("돌잔치")}>주소 복사</CopyBtn>
+          <CopyBtn>
+            <CopyToClipboard
+              text={"대구 수성구 동대구로 194-7 아현정"}
+              onCopy={() => alert("복사완료!")}
+            >
+              <span>주소 복사</span>
+            </CopyToClipboard>
+          </CopyBtn>
         </BtnContainer>
       </AddressContainer>
       <AddressContainer>
@@ -247,7 +244,14 @@ export default function Location() {
           >
             지도 이동
           </LocationBtn>
-          <CopyBtn onClick={() => handleClick("주차")}>주소 복사</CopyBtn>
+          <CopyBtn>
+            <CopyToClipboard
+              text={"대구 수성구 황금동 637-1"}
+              onCopy={() => alert("복사완료!")}
+            >
+              <span>주소 복사</span>
+            </CopyToClipboard>
+          </CopyBtn>
         </BtnContainer>
       </AddressContainer>
       <MapContainer>
