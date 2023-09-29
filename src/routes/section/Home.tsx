@@ -83,7 +83,6 @@ const DescContainer = styled.div`
 `;
 
 const Desc = styled.span`
-  padding: 0 10px;
   width: fit-content;
   word-break: keep-all;
   line-height: 40px;
