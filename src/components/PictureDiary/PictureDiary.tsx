@@ -88,7 +88,7 @@ const PictureDiaryWrapper = styled.div`
 
     .picture-diary-date-wrapper {
       width: 70%;
-      padding: 20px 20px;
+      padding: 20px 10px;
       display: flex;
       justify-content: space-between;
 
