@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import siwoo_main from "../../images/siwoo_main.png";
 import siwoo_main_2 from "../../images/siwoo_main_2.png";
 import Sun from "../../images/sun.png";
 
@@ -54,20 +53,6 @@ const ImgBox = styled.div`
   margin-bottom: 30px;
 `;
 
-const CommentContainer = styled.div`
-  top: 68px;
-  background-color: rgba(0, 0, 0, 0.3);
-  left: 125px;
-  position: absolute;
-  text-align: center;
-  width: 150px;
-  word-break: keep-all;
-  padding: 10px 10px;
-  color: white;
-  border-radius: 30px;
-  border-top-left-radius: 0px;
-`;
-
 const SunImg = styled.img`
   width: 130%;
   position: absolute;
@@ -76,8 +61,6 @@ const SunImg = styled.img`
   left: 50%;
   z-index: -1;
 `;
-
-const Comment = styled.span``;
 
 const Img = styled.img`
   width: 250px;
